@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "models",
+  "info": {
+    "name": "Model",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "edition": {
+      "type": "string",
+      "unique": true
+    },
+    "battery_size": {
+      "type": "decimal",
+      "required": true
+    },
+    "range": {
+      "type": "integer",
+      "required": true
+    },
+    "make": {
+      "model": "make",
+      "via": "models"
+    }
+  }
+}

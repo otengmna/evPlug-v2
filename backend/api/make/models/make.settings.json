@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "makes",
+  "info": {
+    "name": "Make"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "year": {
+      "model": "year",
+      "via": "makes"
+    },
+    "models": {
+      "via": "make",
+      "collection": "model"
+    }
+  }
+}
